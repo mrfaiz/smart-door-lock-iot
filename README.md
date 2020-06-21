@@ -30,3 +30,7 @@ Hardware : LED,  IoT Device (Smart phone)
 **Youtube Link**
 https://youtu.be/U9qgboBjvOg
 
+
+## Course Details ##
+
+https://github.com/mrfaiz/msc_IoT_Wireless_Network.git
