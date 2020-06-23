@@ -1,0 +1,45 @@
+00:00.494	ID:2	[INFO: Main      ] Starting Contiki-NG-release/v4.5-135-g831b86a
+00:00.497	ID:2	[INFO: Main      ] - Routing: nullrouting
+00:00.499	ID:2	[INFO: Main      ] - Net: nullnet
+00:00.501	ID:2	[INFO: Main      ] - MAC: CSMA
+00:00.505	ID:2	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.508	ID:2	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.510	ID:2	[INFO: Main      ] Node ID: 2
+00:00.516	ID:2	[INFO: Main      ] Link-layer address: 0202.0200.0274.1200
+00:00.519	ID:2	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.606	ID:4	[INFO: Main      ] Starting Contiki-NG-release/v4.5-135-g831b86a
+00:00.609	ID:4	[INFO: Main      ] - Routing: nullrouting
+00:00.611	ID:4	[INFO: Main      ] - Net: nullnet
+00:00.613	ID:4	[INFO: Main      ] - MAC: CSMA
+00:00.617	ID:4	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.620	ID:4	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.622	ID:4	[INFO: Main      ] Node ID: 4
+00:00.628	ID:4	[INFO: Main      ] Link-layer address: 0404.0400.0474.1200
+00:00.631	ID:4	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.640	ID:1	[INFO: Main      ] Starting Contiki-NG-release/v4.5-135-g831b86a
+00:00.643	ID:1	[INFO: Main      ] - Routing: nullrouting
+00:00.645	ID:1	[INFO: Main      ] - Net: nullnet
+00:00.647	ID:1	[INFO: Main      ] - MAC: CSMA
+00:00.651	ID:1	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.654	ID:1	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.656	ID:1	[INFO: Main      ] Node ID: 1
+00:00.662	ID:1	[INFO: Main      ] Link-layer address: 0101.0100.0174.1200
+00:00.665	ID:1	[INFO: Sky       ] CC2420 CCA threshold -45
+00:00.973	ID:5	[INFO: Main      ] Starting Contiki-NG-release/v4.5-135-g831b86a
+00:00.976	ID:5	[INFO: Main      ] - Routing: nullrouting
+00:00.978	ID:5	[INFO: Main      ] - Net: nullnet
+00:00.980	ID:5	[INFO: Main      ] - MAC: CSMA
+00:00.984	ID:5	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:00.987	ID:5	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:00.989	ID:5	[INFO: Main      ] Node ID: 5
+00:00.995	ID:5	[INFO: Main      ] Link-layer address: 0505.0500.0574.1200
+00:00.998	ID:5	[INFO: Sky       ] CC2420 CCA threshold -45
+00:01.157	ID:3	[INFO: Main      ] Starting Contiki-NG-release/v4.5-135-g831b86a
+00:01.160	ID:3	[INFO: Main      ] - Routing: nullrouting
+00:01.162	ID:3	[INFO: Main      ] - Net: nullnet
+00:01.164	ID:3	[INFO: Main      ] - MAC: CSMA
+00:01.168	ID:3	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+00:01.171	ID:3	[INFO: Main      ] - 802.15.4 Default channel: 26
+00:01.173	ID:3	[INFO: Main      ] Node ID: 3
+00:01.179	ID:3	[INFO: Main      ] Link-layer address: 0303.0300.0374.1200
+00:01.182	ID:3	[INFO: Sky       ] CC2420 CCA threshold -45

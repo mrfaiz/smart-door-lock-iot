@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include "contiki.h"
+#include "dev/button-sensor.h"
+#include "dev/leds.h"
+#include <stdio.h>
+#include <string.h>
+#include "sys/node-id.h"
+#include "net/netstack.h"        // for sending data
+#include "net/nullnet/nullnet.h" // for nullnet
+#include "../utilities/utilities.h"
+
+// static linkaddr_t dest_addr =  {{ 0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00 }};
+//ID:1	[INFO: Main      ] Link-layer address: 0101.0100.0174.1200
+//ID:2	[INFO: Main      ] Link-layer address: 0202.0200.0274.1200
+
+static linkaddr_t gateway_addr = {{0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00}};
+
+/*-----------------------------------------------------------------------------*/
+
+void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const linkaddr_t *dest)
+{
+  if (len == sizeof(pkt))
+  {
+    struct packet tmp;
+    memcpy(&tmp, data, sizeof(tmp));
+    if (tmp.packet_type == 2)
+    {
+      printf("\n Got unlock signal from ! =>%u", tmp.node_id);
+    }
+  }
+}
+
+/*---------------------------------------------------------------------------*/
+PROCESS(door_switch, "door switch");
+AUTOSTART_PROCESSES(&door_switch);
+/*---------------------------------------------------------------------------*/
+static uint8_t active;
+PROCESS_THREAD(door_switch, ev, data)
+{
+  PROCESS_BEGIN();
+
+  /* Initialize NullNet */
+  nullnet_buf = (uint8_t *)&pkt;
+  nullnet_len = sizeof(pkt);
+  nullnet_set_input_callback(input_callback);
+
+  active = 0;
+  SENSORS_ACTIVATE(button_sensor);
+
+  while (1)
+  {
+    PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event && data == &button_sensor);
+    if (!active)
+    {
+      /* activate light sensor */
+      leds_on(LEDS_GREEN);
+    }
+    else
+    {
+      /* deactivate light sensor */
+      leds_off(LEDS_GREEN);
+    }
+
+    pkt.status = active;
+    pkt.node_id = node_id;
+    pkt.packet_type = 1;
+    NETSTACK_NETWORK.output(&gateway_addr);
+    active ^= 1;
+  }
+  PROCESS_END();
+}
+/*---------------------------------------------------------------------------*/

@@ -1,4 +1,4 @@
-CONTIKI_PROJECT = door_lock
+CONTIKI_PROJECT = gateway
 all: $(CONTIKI_PROJECT)
 
 CONTIKI = ../../..
