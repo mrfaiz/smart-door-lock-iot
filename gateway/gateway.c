@@ -7,8 +7,8 @@
 #include "../utilities/utilities.h"
 
 /*----------------------------------------------------------------------------*/
-
-static linkaddr_t door_switch_addr = {{ 0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00 }};
+static unsigned short last_received_packet = -1;
+static linkaddr_t door_switch_addr = {{0x01, 0x01, 0x01, 0x00, 0x01, 0x74, 0x12, 0x00}};
 
 //ID:3	[INFO: Main      ] Link-layer address: 0303.0300.0374.1200
 // static linkaddr_t device1_addr = {{ 0x03, 0x03, 0x03, 0x00, 0x03, 0x74, 0x12, 0x00 }};
@@ -26,18 +26,26 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
   {
     struct packet tmp;
     memcpy(&tmp, data, sizeof(tmp));
-    printf("\ngateway received=>%u", tmp.status);
+    // printf("\ngateway received=>%u", tmp.status);
     pkt = tmp;
     if (tmp.packet_type == 1)
     {
-      // NETSTACK_NETWORK.output(&device3_addr);
-      // NETSTACK_NETWORK.output(&device1_addr);
-      // NETSTACK_NETWORK.output(&device2_addr);
+      printf("Forwarded: lock\n");
       NETSTACK_NETWORK.output(NULL);
+      last_received_packet = tmp.packet_id;
     }
     else
     {
-      NETSTACK_NETWORK.output(&door_switch_addr);
+      printf("Forwarded: unlock\n");
+      if (tmp.packet_id == last_received_packet)
+      {
+        NETSTACK_NETWORK.output(&door_switch_addr);
+        last_received_packet = -1;
+      }
+      else
+      {
+        printf("Door already unlocked\n");
+      }
     }
   }
 }
@@ -49,7 +57,7 @@ AUTOSTART_PROCESSES(&gateway);
 PROCESS_THREAD(gateway, ev, data)
 {
   PROCESS_BEGIN();
-
+  printf("Gateway\n");
   /* Initialize NullNet */
   nullnet_buf = (uint8_t *)&pkt;
   nullnet_len = sizeof(pkt);

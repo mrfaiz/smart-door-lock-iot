@@ -14,7 +14,7 @@
 //ID:2	[INFO: Main      ] Link-layer address: 0202.0200.0274.1200
 
 static linkaddr_t gateway_addr = {{0x02, 0x02, 0x02, 0x00, 0x02, 0x74, 0x12, 0x00}};
-
+static unsigned short generated_packet_id;
 /*-----------------------------------------------------------------------------*/
 
 void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const linkaddr_t *dest)
@@ -25,7 +25,7 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
     memcpy(&tmp, data, sizeof(tmp));
     if (tmp.packet_type == 2)
     {
-      printf("\n Got unlock signal from ! =>%u", tmp.node_id);
+      printf("Door unlocked.\n");
     }
   }
 }
@@ -43,28 +43,23 @@ PROCESS_THREAD(door_switch, ev, data)
   nullnet_buf = (uint8_t *)&pkt;
   nullnet_len = sizeof(pkt);
   nullnet_set_input_callback(input_callback);
-
+  printf("Main Door\n");
   active = 0;
   SENSORS_ACTIVATE(button_sensor);
 
   while (1)
   {
     PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event && data == &button_sensor);
-    if (!active)
-    {
-      /* activate light sensor */
-      leds_on(LEDS_GREEN);
-    }
-    else
-    {
-      /* deactivate light sensor */
-      leds_off(LEDS_GREEN);
-    }
+    generated_packet_id = generated_packet_id + 1;
+    if (generated_packet_id > 1000)
+      generated_packet_id = 1;
 
     pkt.status = active;
     pkt.node_id = node_id;
     pkt.packet_type = 1;
+    pkt.packet_id = generated_packet_id;
     NETSTACK_NETWORK.output(&gateway_addr);
+    printf("Lock signal sent\n");
     active ^= 1;
   }
   PROCESS_END();
