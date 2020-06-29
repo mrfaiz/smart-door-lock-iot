@@ -1,0 +1,127 @@
+=============================
+966439	ID:1	Door: Unlock signal sent
+966470	ID:2	Forwarded to IoT device
+966503	ID:5	Device: Unlock signal found
+966503	ID:3	Device: Unlock signal found
+966504	ID:4	Device: Unlock signal found
+1491147	ID:5	Device: Unlock sent
+1491177	ID:2	Forwarded to Door
+1491197	ID:1	Door unlocked.
+=============================
+1833908	ID:1	Door: Unlock signal sent
+1833921	ID:2	Forwarded to IoT device
+1833963	ID:3	Device: Unlock signal found
+1833963	ID:4	Device: Unlock signal found
+1833963	ID:5	Device: Unlock signal found
+1985748	ID:5	Device: Unlock sent
+1985762	ID:2	Forwarded to Door
+1985806	ID:1	Door unlocked.
+=============================
+2839492	ID:1	Door: Unlock signal sent
+2839531	ID:2	Forwarded to IoT device
+2839580	ID:5	Device: Unlock signal found
+2839580	ID:3	Device: Unlock signal found
+2839580	ID:4	Device: Unlock signal found
+3003538	ID:4	Device: Unlock sent
+3003568	ID:2	Forwarded to Door
+3003611	ID:1	Door unlocked.
+=============================
+3119775	ID:1	Door: Unlock signal sent
+3119812	ID:2	Forwarded to IoT device
+3119819	ID:4	Device: Unlock signal found
+3119819	ID:5	Device: Unlock signal found
+3119819	ID:3	Device: Unlock signal found
+3228362	ID:3	Device: Unlock sent
+3228393	ID:2	Forwarded to Door
+3228407	ID:1	Door unlocked.
+=============================
+3307624	ID:1	Door: Unlock signal sent
+3307671	ID:2	Forwarded to IoT device
+3307721	ID:3	Device: Unlock signal found
+3307721	ID:5	Device: Unlock signal found
+3307721	ID:4	Device: Unlock signal found
+3447362	ID:3	Device: Unlock sent
+3447376	ID:2	Forwarded to Door
+3447382	ID:1	Door unlocked.
+=============================
+3556064	ID:1	Door: Unlock signal sent
+3556101	ID:2	Forwarded to IoT device
+3556143	ID:3	Device: Unlock signal found
+3556143	ID:5	Device: Unlock signal found
+3556143	ID:4	Device: Unlock signal found
+3686741	ID:3	Device: Unlock sent
+3686782	ID:2	Forwarded to Door
+3686788	ID:1	Door unlocked.
+=============================
+3767947	ID:1	Door: Unlock signal sent
+3767950	ID:2	Forwarded to IoT device
+3767971	ID:3	Device: Unlock signal found
+3767971	ID:5	Device: Unlock signal found
+3767971	ID:4	Device: Unlock signal found
+3840128	ID:3	Device: Unlock sent
+3840165	ID:2	Forwarded to Door
+3840212	ID:1	Door unlocked.
+=============================
+3960626	ID:1	Door: Unlock signal sent
+3960672	ID:2	Forwarded to IoT device
+3960705	ID:3	Device: Unlock signal found
+3960705	ID:5	Device: Unlock signal found
+3960705	ID:4	Device: Unlock signal found
+4054753	ID:3	Device: Unlock sent
+4054798	ID:2	Forwarded to Door
+4054804	ID:1	Door unlocked.
+=============================
+4146259	ID:1	Door: Unlock signal sent
+4146262	ID:2	Forwarded to IoT device
+4146307	ID:3	Device: Unlock signal found
+4146307	ID:4	Device: Unlock signal found
+4146307	ID:5	Device: Unlock signal found
+4241988	ID:3	Device: Unlock sent
+4242024	ID:2	Forwarded to Door
+4242064	ID:1	Door unlocked.
+=============================
+4485744	ID:1	Door: Unlock signal sent
+4485747	ID:2	Forwarded to IoT device
+4485791	ID:3	Device: Unlock signal found
+4485791	ID:4	Device: Unlock signal found
+4485791	ID:5	Device: Unlock signal found
+4576128	ID:3	Device: Unlock sent
+4576131	ID:2	Forwarded to Door
+4576173	ID:1	Door unlocked.
+=============================
+4775861	ID:1	Door: Unlock signal sent
+4775906	ID:2	Forwarded to IoT device
+4775940	ID:3	Device: Unlock signal found
+4775940	ID:5	Device: Unlock signal found
+4775940	ID:4	Device: Unlock signal found
+4852264	ID:4	Device: Unlock sent
+4852278	ID:2	Forwarded to Door
+4852314	ID:1	Door unlocked.
+=============================
+4944259	ID:1	Door: Unlock signal sent
+4944289	ID:2	Forwarded to IoT device
+4944307	ID:3	Device: Unlock signal found
+4944307	ID:4	Device: Unlock signal found
+4944307	ID:5	Device: Unlock signal found
+5039405	ID:5	Device: Unlock sent
+5039442	ID:2	Forwarded to Door
+5039493	ID:1	Door unlocked.
+=============================
+5138962	ID:1	Door: Unlock signal sent
+5138965	ID:2	Forwarded to IoT device
+5138978	ID:3	Device: Unlock signal found
+5138978	ID:4	Device: Unlock signal found
+5138979	ID:5	Device: Unlock signal found
+5238751	ID:5	Device: Unlock sent
+5238793	ID:2	Forwarded to Door
+5238814	ID:1	Door unlocked.
+=============================
+5335947	ID:1	Door: Unlock signal sent
+5335984	ID:2	Forwarded to IoT device
+5335991	ID:4	Device: Unlock signal found
+5335991	ID:5	Device: Unlock signal found
+5335991	ID:3	Device: Unlock signal found
+5448647	ID:4	Device: Unlock sent
+5448684	ID:2	Forwarded to Door
+5448728	ID:1	Door unlocked.
+=============================

@@ -59,7 +59,7 @@ PROCESS_THREAD(door_switch, ev, data)
     pkt.packet_type = 1;
     pkt.packet_id = generated_packet_id;
     NETSTACK_NETWORK.output(&gateway_addr);
-    printf("Lock signal sent\n");
+    printf("Door: Unlock signal sent\n");
     active ^= 1;
   }
   PROCESS_END();

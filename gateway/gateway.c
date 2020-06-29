@@ -30,21 +30,21 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
     pkt = tmp;
     if (tmp.packet_type == 1)
     {
-      printf("Forwarded: lock\n");
+      printf("Forwarded to IoT device\n");
       NETSTACK_NETWORK.output(NULL);
       last_received_packet = tmp.packet_id;
     }
     else
     {
-      printf("Forwarded: unlock\n");
       if (tmp.packet_id == last_received_packet)
       {
+        printf("Forwarded to Door\n");
         NETSTACK_NETWORK.output(&door_switch_addr);
         last_received_packet = -1;
       }
       else
       {
-        printf("Door already unlocked\n");
+        printf("Gateway: Door already unlocked\n");
       }
     }
   }

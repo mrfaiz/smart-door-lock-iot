@@ -25,7 +25,7 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
         pkt = tmp;
         if (tmp.packet_type == 1)
         {
-            printf("Unlock signal found\n");
+            printf("Device: Unlock signal found\n");
             if (tmp.status)
                 leds_on(LEDS_RED);
             else
@@ -62,7 +62,7 @@ PROCESS_THREAD(devices, ev, data)
             pkt.node_id = node_id;
             pkt.packet_id = received_packet_id;
             NETSTACK_NETWORK.output(&gateway_addr);
-            printf("Unlock sent\n");
+            printf("Device: Unlock sent\n");
             received_packet_id = -1;
         }
     }
