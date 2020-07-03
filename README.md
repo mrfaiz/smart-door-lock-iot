@@ -34,3 +34,12 @@ https://youtu.be/U9qgboBjvOg
 ## Course Details ##
 
 https://github.com/mrfaiz/msc_IoT_Wireless_Network.git
+
+
+##Presentation
+
+Youtube:
+https://youtu.be/lG8YsOjRXMQ
+
+Slides:
+https://docs.google.com/presentation/d/1xkkf_6yzQddOWVbzgZF1IcBdZFaxgf3J64ARcTZLoGQ/edit#slide=id.g8a3e69df28_0_18
